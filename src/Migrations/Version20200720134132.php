@@ -95,7 +95,7 @@ class Version20200720134132 extends AbstractMigration
     public function down(Schema $schema) : void
     {
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'postgresql', 'Migration can only be executed safely on \'postgresql\'.');
-/*
+
         $this->addSql('DELETE FROM "order" WHERE id = :id', [':id' => "8921a1c2-c6ed-4d1d-8288-18841238892c"]);
 
         $this->addSql('DELETE FROM "admin" WHERE id = :id', [':id' =>  "fe77ad80-e99b-4c62-8071-3d8c8c16b66e"]);
@@ -103,7 +103,7 @@ class Version20200720134132 extends AbstractMigration
         $this->addSql('DELETE FROM "user" WHERE id = :id', [':id' => "416d34fa-120d-47f4-999c-8db68c18a014"]);
 
         $this->addSql('DELETE FROM "book" WHERE id = :id', [':id' => "10bc05ea-a876-400e-81bc-ffdc4c74dbaf"]);
-*/
+
         $this->addSql('DROP TABLE "order"');
 
         $this->addSql('DROP TABLE "admin"');
