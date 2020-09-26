@@ -1,3 +1,7 @@
 #index:
 #    path: /
-#    controller: App\Controller\DefaultController::index
+#    controller: App\Controller\PageController::Index
+
+#order:
+#    path: order
+#    controller: App\Controller\PageController::Order
